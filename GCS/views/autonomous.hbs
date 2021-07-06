@@ -1,0 +1,44 @@
+{{!-- <iframe src="http://192.168.1.103:8080/vyadh19_test/html/sim_urdf.html" height=800px width=1800px
+	style="margin-top:20px;"></iframe> --}}
+<div class="flex">
+	<div id="input">
+		INPUT
+		<div>
+			Latitude
+			<input type="text" id="lat" value="0.0" size="5" autocomplete="off" class="selectable">
+		</div>
+		<div>
+			Longitude
+			<input type="text" id="long" value="0.0" size="5" autocomplete="off" class="selectable">
+		</div>
+		<div id="submit" style="margin: 0 3em;">SUBMIT</div>
+	</div>
+	<div id="output">
+		OUTPUT
+		<div class="flex" style="margin-top: 0.8em; padding:0;">
+			<div class="mag flex-column-center border">
+				<div class="mag-head border">CURRENT BEARING</div>
+				<img id="compass0" alt="Rover Magnetometer" src="/img/compass.png" class="compass">
+				<img id="needle0" alt="Magnetometer Needle" src="/img/needle.png" class="needle">
+				<span class="mag-text border-tb">Yaw:&nbsp;<span id="mag-text0">0.0°</span></span>
+			</div>
+			<div class="mag flex-column-center border">
+				<div class="mag-head border">TARGET BEARING</div>
+				<img id="compass1" alt="Robotic Arm Magnetometer" src="/img/compass.png" class="compass">
+				<img id="needle1" alt="Magnetometer Needle" src="/img/needle.png" class="needle">
+				<span class="mag-text border-tb">Yaw:&nbsp;<span id="mag-text1">0.0°</span></span>
+			</div>
+		</div>
+		<div class="border">
+			Target Distance:&nbsp;<span id="target-distance"></span>
+		</div>
+		<div class="border">
+			Commands
+			<div id="commands"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/eventemitter.min.js"></script>
+<script type="text/javascript" src="js/roslib.min.js"></script>
+<script type="text/javascript" src="js/autonomous.js"></script>

@@ -1,0 +1,63 @@
+#input,
+#output {
+    margin-top: 0.5em;
+    font-size: 3em;
+    flex: 1 1;
+}
+
+#input>*,
+#output>* {
+    padding: 0.8em 0;
+    font-size: 0.7em;
+}
+
+#submit {
+    background-color: darkgray;
+    color: black;
+    border-radius: 3px;
+    padding: 0.5em 0;
+    transition: 0.1s;
+}
+
+#submit:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+#submit:active {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.mag {
+    flex: 1 0;
+}
+
+.mag-head {
+    font: bold 1em "Josefin Sans";
+    background-image: linear-gradient( to bottom, rgb(80, 80, 80), rgb(36, 36, 36));
+    width: 100%;
+    padding: 14px 0 6px 0;
+}
+
+.compass {
+    height: 12vw;
+    min-height: 175px;
+    margin: 6px 0;
+}
+
+.needle {
+    height: 8vw;
+    position: absolute;
+}
+
+.mag-text {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    padding: 4px 0 8px 0;
+    width: 45%;
+}
+
+#commands {
+    height: 28vh;
+    overflow: auto;
+}

@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Changa;
+    font-weight: 800;
+    src: url("../fonts/ChangaExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Changa;
+    font-weight: bold;
+    src: url("../fonts/ChangaBold.ttf");
+}
+
+@font-face {
+    font-family: "Leelawadee UI";
+    src: url("../fonts/Leelawadee.ttf");
+}
+
+@font-face {
+    font-family: "Leelawadee UI";
+    font-weight: bold;
+    src: url("../fonts/LeelawadeeBold.TTF");
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans.ttf");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: Arial;
+    font-weight: bold;
+    src: url("../fonts/arialbd.ttf");
+}
+
+@font-face {
+    font-family: Candara;
+    src: url("../fonts/Candara.ttf");
+}
+
+* {
+    user-select: none;
+    text-align: center;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #b2afaf;
+    font-family: "Leelawadee UI";
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-center-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-column-space-evenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.border {
+    border: 1px solid #707070;
+}
+
+.border-tb {
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+}
+
+.border-lr {
+    border-right: 1px solid #707070;
+    border-left: 1px solid #707070;
+}
+
+.border-r {
+    border-right: 1px solid #707070;
+}
+
+.border-l {
+    border-left: 1px solid #707070;
+}
+
+#titlebar {
+    margin: 5px 0 10px 0;
+}
+
+#titlebar>* {
+    margin: 0 10px;
+}
+
+#GCS {
+    font: 2.5em "Leelawadee UI";
+    letter-spacing: 0.5vw;
+    margin-left: 1.5vw;
+}
+
+nav {
+    font-family: "Josefin Sans";
+    flex-grow: 1;
+    margin-top: 5px;
+}
+
+a {
+    font-size: 20px;
+    padding: 15px 0 10px 0;
+    flex-grow: 1;
+    text-decoration: none;
+    color: #dedede;
+    outline: 0;
+}
+
+a:first-child {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+a:last-child {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+a:hover:not(.current-page) {
+    background-color: rgb(50, 50, 50);
+}
+
+.current-page {
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+.selectable {
+    user-select: text !important;
+}
+
+#signature {
+    position: fixed;
+    bottom: 0;
+    left: 44.5vw;
+    font: 100 2em "DejaVu Sans";
+    color: rgba(255, 255, 255, 0.02);
+}

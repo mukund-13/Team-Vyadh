@@ -1,0 +1,27 @@
+
+odom0: /odom_sync
+
+odom0_config: [true,  true,  true,
+               false, false, false,
+               false, false, false,
+               false, false, true,
+               false, false, false]
+
+map_frame: map
+odom_frame: odom
+base_link_frame: kinect2_base_link
+
+imu0: /android/imu
+imu0_config: [false, false, false,
+              true,  true,  true,
+              false, false, false,
+              true,  true,  true,
+              true,  true,  true]
+imu0_nodelay: false
+imu0_differential: false
+imu0_relative: true
+imu0_queue_size: 5
+imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
+imu0_twist_rejection_threshold: 0.8                #
+imu0_linear_acceleration_rejection_threshold: 0.8  #
+

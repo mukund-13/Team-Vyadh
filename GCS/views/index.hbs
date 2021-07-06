@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/favicon.ico">
+	<title>Team Vyadh GCS</title>
+	<style>
+		body {
+			background-color: #1C1C1C;
+		}
+
+		.logos {
+			height: 5vw;
+			min-height: 100px;
+		}
+
+		h1 {
+			color: #B2AFAF;
+			font-size: 3em;
+			flex-grow: 2 !important;
+		}
+
+		#titlebar {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			transition: all 0.5s ease-out;
+		}
+
+		.titlebar-anim {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+
+		#titlebar>* {
+			flex: 1 1 0;
+			text-align: center;
+		}
+
+		#vyadh-outline,
+		#vyadh-filled {
+			width: 15vw;
+			min-width: 165px;
+		}
+
+		.wheel {
+			width: 4vw;
+			min-width: 44px;
+			position: absolute;
+			animation: rotation 3s infinite linear;
+		}
+
+		#super-awesome-button {
+			text-align: center;
+			padding-top: 7vh;
+		}
+
+		@keyframes rotation {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(359deg);
+			}
+		}
+
+		#antenna {
+			width: 0.5vw;
+			position: absolute;
+		}
+	</style>
+	{{!-- <link rel="stylesheet" href="css/global.css"> --}}
+</head>
+
+<body>
+	<div id="titlebar" class="titlebar-anim">
+		<div><img src="img/vyadh_logo.png" class="logos"></div>
+		<h1 style="display: none;">Team Vyadh - Ground Control Station</h1>
+		<div><img src="img/seds_logo.png" class="logos" style="height: 6vw;"></div>
+	</div>
+	<div id="super-awesome-button">
+		<img src="img/button/Vyadh_outline1.png" id="vyadh-outline">
+		<img src="img/button/wheel.png" class="wheel" id="wheel1">
+		<img src="img/button/wheel.png" class="wheel" id="wheel2">
+		<img src="img/button/Antenna.png" id="antenna">
+		<img src="img/button/Vyadh_filled.png" id="vyadh-filled" style="position: absolute; opacity: 0.5;">
+	</div>
+	<script>
+		const titlebar = document.getElementById("titlebar");
+		document.body.onload = function () {
+			titlebar.classList.toggle("titlebar-anim");
+		}
+		const o = document.getElementById("vyadh-outline");
+		const a = document.getElementById("wheel1");
+		const b = document.getElementById("wheel2");
+		const c = document.getElementById("antenna");
+		const d = document.getElementById("vyadh-filled");
+		function reposition() {
+			const p = o.getBoundingClientRect();
+			let temp = p.bottom * 1.03 + "px";
+			a.style.top = temp;
+			a.style.left = p.left * 1.04 + "px";
+			b.style.top = temp;
+			b.style.left = p.right * 0.9375 + "px";
+			c.style.left = p.right * 0.987 + "px";
+			c.style.top = p.top * 1.05 + "px";
+			d.style.top = p.top + "px";
+			d.style.left = p.left + "px";
+		}
+		setTimeout(reposition, 500);
+		window.onresize = reposition;
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+digraph G {
+"kinect2_link" -> "kinect2_rgb_optical_frame"[label="Broadcaster: /kinect2\nAverage rate: 88.398 Hz\nMost recent transform: 1567708362.149 ( 0.013 sec old)\nBuffer length: 4.955 sec\n"];
+"kinect2_base_link" -> "kinect2_link"[label="Broadcaster: /kinect2_base_link\nAverage rate: 10.173 Hz\nMost recent transform: 1567708362.260 ( -0.098 sec old)\nBuffer length: 4.915 sec\n"];
+"kinect2_rgb_optical_frame" -> "kinect2_ir_optical_frame"[label="Broadcaster: /kinect2\nAverage rate: 88.398 Hz\nMost recent transform: 1567708362.149 ( 0.013 sec old)\nBuffer length: 4.955 sec\n"];
+"map" -> "odom"[label="Broadcaster: /rtabmap/rtabmap\nAverage rate: 20.204 Hz\nMost recent transform: 1567708362.242 ( -0.080 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1567708362.162"[ shape=plaintext ] ;
+ }->"map";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1567708362.162"[ shape=plaintext ] ;
+ }->"kinect2_base_link";
+}

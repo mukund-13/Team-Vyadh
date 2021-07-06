@@ -1,0 +1,8 @@
+image: Norm1.png
+resolution: 0.1
+origin: [0.000000, 0.000000, 0.000000]
+negate: 1
+occupied_thresh: 1
+free_thresh: 0
+mode: scale
+

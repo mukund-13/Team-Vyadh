@@ -1,0 +1,47 @@
+.running {
+    background-color: chartreuse;
+}
+
+.camera-title {
+    border-color: #c9c9c9;
+    color: #DEDEDE;
+    font-family: "Leelawadee UI";
+    font-size: 30px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    padding: 6px 0 10px 0;
+}
+
+.camera-container {
+    border-color: #c9c9c9;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.camera-buttons {
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.camera-buttons>* {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.camera-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.cam {
+    padding: 0 16px;
+}
+
+#row2 {
+    margin: 2px;
+}

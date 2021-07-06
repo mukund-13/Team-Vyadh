@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="sensor" type="mpu1.py" name="elbow_angle" output="log">
+    </node>
+    <node pkg="sensor" type="mpu2.py" name="shoulder_angle" output="log">
+    </node>
+    <node pkg="sensor" type="magneto1.py" name="heading_angle" output="log">
+    </node>
+    <node pkg="sensor" type="listener.py" name="listener" output="log">
+    </node>
+</launch>

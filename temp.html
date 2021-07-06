@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Vyadh GCS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/controls.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <div id="titlebar" class="flex-center">
+        <img src="img/vyadh_logo.png" class="logo">
+        <img src="img/seds_logo.png" class="logo" style="height: 3.5vw;">
+        <span id="GCS">GCS</span>
+        <nav id="navbar" class="flex-center">
+            <a href="index.html" id="control_center" class="navbar_element">CONTROL CENTER</a>
+            <a href="cameras.html" id="camera_feeds" class="navbar_element">CAMERA FEEDS</a>
+            <a href="simulation.html" id="simulation" class="navbar_element">SIMULATON</a>
+            <a href="science.html" id="science_center" class="navbar_element">SCIENCE CENTER</a>
+        </nav>
+    </div>
+    <div class="left_side">
+        <div id="map">
+            <img src="img/map.png">
+        </div>
+        <div class="ac_head">
+            <div class="ac_title">
+                ARM CONTROLS
+            </div>
+            <div class="ac_button">
+                <input type="radio" name="auto_radio" id="auto_radio" checked="true">
+                <label for="auto_radio">
+                    <div style="display: inline-block; margin-top:3px;">AUTOMATIC</div>
+                </label>
+            </div>
+            <div class="ac_button">
+                <input type="radio" name="manual_radio" id="manual_radio">
+                <label for="manual_radio">
+                    <div style="display: inline-block; margin-top:3px;">MANUAL</div>
+                </label>
+            </div>
+        </div>
+        <div id="toggle_auto">
+            <div class="initial">
+                <div class="auto_header">
+                    INITIAL
+                </div>
+                <div class="auto_object">
+                    <div class="variable">
+                        X =
+                    </div>
+                    <div class="initial_value" id="initial_x">
+                        107.98
+                    </div>
+                </div>
+                <div class="auto_object">
+                    <div class="variable">
+                        Y =
+                    </div>
+                    <div class="initial_value" id="initial_y">
+                        312.55
+                    </div>
+                </div>
+                <div class="auto_object">
+                    <div class="variable">
+                        Z =
+                    </div>
+                    <div class="initial_value" id="initial_z">
+                        257.99
+                    </div>
+                </div>
+            </div>
+            <div class="steps">
+                <div class="auto_header" style="width: 490px;">
+                    STEPS
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x_10">
+                        -10
+                    </div>
+                    <div class="auto_object auto_button" id="y_10">
+                        -10
+                    </div>
+                    <div class="auto_object auto_button" id="z_10">
+                        -10
+                    </div>
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x_5">
+                        -5
+                    </div>
+                    <div class="auto_object auto_button" id="y_5">
+                        -5
+                    </div>
+                    <div class="auto_object auto_button" id="z_5">
+                        -5
+                    </div>
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x_1">
+                        -1
+                    </div>
+                    <div class="auto_object auto_button" id="y_1">
+                        -1
+                    </div>
+                    <div class="auto_object auto_button" id="z_1">
+                        -1
+                    </div>
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x1">
+                        +1
+                    </div>
+                    <div class="auto_object auto_button" id="y1">
+                        +1
+                    </div>
+                    <div class="auto_object auto_button" id="z1">
+                        +1
+                    </div>
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x5">
+                        +5
+                    </div>
+                    <div class="auto_object auto_button" id="y5">
+                        +5
+                    </div>
+                    <div class="auto_object auto_button" id="z5">
+                        +5
+                    </div>
+                </div>
+                <div class="button_column">
+                    <div class="auto_object auto_button" id="x10">
+                        +10
+                    </div>
+                    <div class="auto_object auto_button" id="y10">
+                        +10
+                    </div>
+                    <div class="auto_object auto_button" id="z10">
+                        +10
+                    </div>
+                </div>
+            </div>
+            <div class="custom">
+                <div class="auto_header">
+                    CUSTOM
+                </div>
+                <div class="auto_object" style="line-height: 32px;">
+                    <input class="custom_input_box" type="text" name="custom_x" id="custom_x">
+                    <button type="button" class="custom_button" id="add_x">ADD</button>
+                </div>
+                <div class="auto_object" style="line-height: 32px;">
+                    <input class="custom_input_box" type="text" name="custom_y" id="custom_y">
+                    <button type="button" class="custom_button" id="add_y">ADD</button>
+                </div>
+                <div class="auto_object" style="line-height: 32px;">
+                    <input class="custom_input_box" type="text" name="custom_z" id="custom_z">
+                    <button type="button" class="custom_button" id="add_z">ADD</button>
+                </div>
+            </div>
+            <div class="new_submit">
+                <div class="final_values">
+                    <div class="auto_header">
+                        NEW
+                    </div>
+                    <div class="auto_object">
+                        <div class="variable">
+                            X =
+                        </div>
+                        <input class="input_box" type="text" name="X_VAL" id="final_x">
+                    </div>
+                    <div class="auto_object">
+                        <div class="variable">
+                            Y =
+                        </div>
+                        <input class="input_box" type="text" name="Y_VAL" id="final_y">
+                    </div>
+                    <div class="auto_object">
+                        <div class="variable">
+                            Z =
+                        </div>
+                        <input class="input_box" type="text" name="Z_VAL" id="final_z">
+                    </div>
+                </div>
+                <div class="submit">
+                    S<br>U<br>B<br>M<br>I<br>T
+                </div>
+            </div>
+        </div>
+        <div id="toggle_manual">
+            <div class="manual_header">
+                <div class="manual_header_object">
+                    BASE
+                </div>
+                <div class="manual_header_object">
+                    SHOULDER
+                </div>
+                <div class="manual_header_object">
+                    ELBOW
+                </div>
+                <div class="manual_header_object" style="line-height: 30px;">
+                    WRIST UP/DOWN
+                </div>
+                <div class="manual_header_object">
+                    WRIST ROT
+                </div>
+                <div class="manual_header_object">
+                    GRIPPER
+                </div>
+                <div class="manual_header_object motion_head">
+                    MOTION
+                </div>
+            </div>
+            <div class="manual_body">
+                <div class="manual_body_object" id="Q">
+                    Q
+                </div>
+                <div class="manual_body_object" id="W">
+                    W
+                </div>
+                <div class="manual_body_object" id="E">
+                    E
+                </div>
+                <div class="manual_body_object" id="R">
+                    R
+                </div>
+                <div class="manual_body_object" id="T">
+                    T
+                </div>
+                <div class="manual_body_object" id="Y">
+                    Y
+                </div>
+                <div class="manual_body_object motion_object">
+                    UP/<br>CLOCKWISE/<br>OPEN
+                </div>
+            </div>
+            <div class="manual_body">
+                <div class="manual_body_object" id="A">
+                    A
+                </div>
+                <div class="manual_body_object" id="S">
+                    S
+                </div>
+                <div class="manual_body_object" id="D">
+                    D
+                </div>
+                <div class="manual_body_object" id="F">
+                    F
+                </div>
+                <div class="manual_body_object" id="G">
+                    G
+                </div>
+                <div class="manual_body_object" id="H">
+                    H
+                </div>
+                <div class="manual_body_object motion_object">
+                    DOWN/<br>ANTI-CLOCKWISE/<br>CLOSE
+                </div>
+            </div>
+            <div class="manual_body">
+                <div class="manual_body_object" id="Z">
+                    Z
+                </div>
+                <div class="manual_body_object" id="X">
+                    X
+                </div>
+                <div class="manual_body_object" id="C">
+                    C
+                </div>
+                <div class="manual_body_object" id="V">
+                    V
+                </div>
+                <div class="manual_body_object" id="B">
+                    B
+                </div>
+                <div class="manual_body_object" id="N">
+                    N
+                </div>
+                <div class="manual_body_object motion_object" style="font-size:30px; line-height: 78px;">
+                    HALT
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_side">
+        <div class="mag" id="mag1">
+            <div class="mag_head">
+                ROVER
+            </div>
+            <div class="mag_body">
+                <img src="img/compass_with_grid.png" style="margin-top: 12px;" id="compass1">
+                <img src="img/needle1.png" id="needle1">
+                <div class="compass_text" id="compass_text1">
+                    Yaw: 17.57°
+                </div>
+            </div>
+        </div>
+        <div class="mag" id="mag2">
+            <div class="mag_head">
+                ROBOTIC ARM
+            </div>
+            <div class="mag_body">
+                <img src="img/compass_with_grid.png" style="margin-top: 12px;" id="compass2">
+                <img src="img/needle1.png" id="needle2">
+                <div class="compass_text" id="compass_text2">
+                    Yaw: 47.57°
+                </div>
+            </div>
+        </div>
+        <div class="accelerometer" id="accel1">
+            <div class="accel_head">
+                CHASSIS
+            </div>
+            <div class="accel_body">
+                <div class="accel_body_content">
+                    Pitch:
+                </div>
+                <div class="accel_body_values" id="pitch1">
+                    5
+                </div>
+                <div class="accel_body_content">
+                    Roll:
+                </div>
+                <div class="accel_body_values" id="roll1">
+                    5
+                </div>
+            </div>
+        </div>
+        <div class="accelerometer" id="accel2">
+            <div class="accel_head">
+                ARM SHOULDER
+            </div>
+            <div class="accel_body">
+                <div class="accel_body_content">
+                    Pitch:
+                </div>
+                <div class="accel_body_values" id="pitch2">
+                    5
+                </div>
+                <div class="accel_body_content">
+                    Roll:
+                </div>
+                <div class="accel_body_values" id="roll2">
+                    5
+                </div>
+            </div>
+        </div>
+        <div class="accelerometer" id="accel3">
+            <div class="accel_head">
+                ARM ELBOW
+            </div>
+            <div class="accel_body">
+                <div class="accel_body_content">
+                    Pitch:
+                </div>
+                <div class="accel_body_values" id="pitch3">
+                    5
+                </div>
+                <div class="accel_body_content">
+                    Roll:
+                </div>
+                <div class="accel_body_values" id="roll3">
+                    5
+                </div>
+            </div>
+        </div>
+        <div class="GPS">
+            <div class="latlong">
+                Latitude:
+            </div>
+            <div class="latlong_values" id="latitude">
+                12°58'7"N
+            </div>
+            <div class="latlong">
+                Longitude:
+            </div>
+            <div class="latlong_values" id="longitude">
+                79° 9'19"E
+            </div>
+        </div>
+        <div class="rover_controls">
+            <div class="speed">
+                <div class="speed_head">
+                    SPEED
+                </div>
+                <div class="speed_val" id="low">
+                    LOW
+                </div>
+                <div class="speed_val" id="med">
+                    MEDIUM
+                </div>
+                <div class="speed_val" id="high">
+                    HIGH
+                </div>
+            </div>
+            <div class="rc">
+                <div class="rc_head">
+                    ROVER CONTROLS
+                </div>
+                <div class="rc_keys">
+                    <div class="upper">
+                        <img src="img/up.png" id=up>
+                    </div>
+                    <div class="lower" style="text-align: right;">
+                        <img src="img/left.png" id="left">
+                    </div>
+                    <div class="lower" style="text-align: center;">
+                        <img src="img/down.png" id="down">
+                    </div>
+                    <div class="lower" style="text-align: left;">
+                        <img src="img/right.png" id="right">
+                    </div>
+                </div>
+            </div>
+            <div class="halt" id="HALT">
+                H<br>A<br>L<br>T
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/eventemitter.min.js"></script>
+    <script type="text/javascript" src="js/roslib.min.js"></script>
+    <script type="text/javascript" src="js/Controls.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+</body>
+
+</html>

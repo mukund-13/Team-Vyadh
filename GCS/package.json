@@ -1,0 +1,26 @@
+{
+    "name": "gcs",
+    "version": "1.1.0",
+    "description": "Team Vyadh Ground Control Station",
+    "main": "index.js",
+    "scripts": {
+        "start": "echo \"No test specified!\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/team-vyadh/Vyadh.git"
+    },
+    "author": "DashwoodIce9",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://gitlab.com/team-vyadh/Vyadh/issues"
+    },
+    "homepage": "https://gitlab.com/team-vyadh/Vyadh#readme",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "express": "^4.17.1",
+        "express-handlebars": "^3.1.0",
+        "shelljs": "^0.8.3"
+    },
+    "devDependencies": {}
+}
